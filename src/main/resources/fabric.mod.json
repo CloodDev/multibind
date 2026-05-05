@@ -1,0 +1,45 @@
+{
+	"schemaVersion": 1,
+	"id": "multibind",
+	"version": "${version}",
+	"name": "multibind",
+	"description": "Lets each action in Controls bind to multiple keys.",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/multibind/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			{
+				"value": "clood.multibind.Multibind",
+				"adapter": "kotlin"
+			}
+		],
+		"client": [
+			{
+				"value": "clood.multibind.client.MultibindClient",
+				"adapter": "kotlin"
+			}
+		]
+	},
+	"mixins": [
+		"multibind.mixins.json",
+		{
+			"config": "multibind.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.19.2",
+		"minecraft": "~1.21.11",
+		"java": ">=21",
+		"fabric-api": "*",
+		"fabric-language-kotlin": "*"
+	}
+}

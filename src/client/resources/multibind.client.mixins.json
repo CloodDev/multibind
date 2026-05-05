@@ -1,0 +1,15 @@
+{
+	"required": true,
+	"package": "clood.multibind.client.mixin",
+	"compatibilityLevel": "JAVA_21",
+	"client": [
+		"KeyMappingMixin",
+		"KeyBindsScreenMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	},
+	"overwrites": {
+		"requireAnnotations": true
+	}
+}
